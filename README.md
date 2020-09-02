@@ -1,5 +1,5 @@
 # monitoring-plugin-check-lynx
-This is a simple plugin for monitoring your Lynx devices in [Op5
+This is a simple plugin for monitoring your IoT Open Lynx devices in [Op5
 Monitor](https://www.itrsgroup.com/products/op5-monitor),
 [Icinga](https://www.icinga.org/), [Naemon](http://naemon.github.io/),
 [Nagios](http://www.nagios.org/),
@@ -16,7 +16,9 @@ functions.
 
 ## Prerequisites
 
-You need an [API-Key](../../getstarted/api-access) to access your data in Lynx.
+You need an
+[API-Key](https://lynx-demo.iotopen.se/tech/guides/getstarted/api-access/) to
+access your data in Lynx.
 
 ## Plugin syntax
 
