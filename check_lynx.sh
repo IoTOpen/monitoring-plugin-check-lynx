@@ -162,7 +162,7 @@ fi
 
 
 # Get functionx json.
-FUNCX=$(curl -s $URL/api/v2/functionx/$INSTALLATION?id=$FUNCTION -X GET -u monitoring:$API_KEY -H Content-Type: application/json)
+FUNCX=$(curl -s $URL/api/v2/functionx/$INSTALLATION/$FUNCTION -X GET -u monitoring:$API_KEY -H Content-Type: application/json)
 
 # Get topic (must be a topic_read)
 TOPIC=$(echo $FUNCX | jq .meta.topic_read | tr -d \")
@@ -221,7 +221,7 @@ fi
 
 # Get value and timestamp from log
 STATS=$(curl -s $URL/api/v2/status/$INSTALLATION -X GET -u monitoring:$API_KEY -H Content-Type: application/json | jq -c .[] | grep $TOPIC)
-echo curl -s $URL/api/v2/status/$INSTALLATION -X GET -u monitoring:$API_KEY -H Content-Type: application/json 
+
 if [ -z "$STATS" ]; then
 	echo Could not get stats for $NAME
 	exit 3
