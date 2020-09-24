@@ -24,7 +24,7 @@ LC_COLLATE=C
 
 usage() {
 	cat << __END__
-check_lynx v1.0.1
+check_lynx v1.0.2
 
 Monitor values of functions in IoT Open Lynx platform
 
@@ -236,7 +236,7 @@ NOW=$(date +%s)
 AGE=$(echo "($NOW - $TS)/1" | bc) # The division by one is to round to integer
 
 if [ "$FORMAT" != "" ]; then
-	VALUE_FORMATTED=$(printf $FORMAT $VALUE)
+	VALUE_FORMATTED=$(printf "$FORMAT" $VALUE)
 else
 	VALUE_FORMATTED=$VALUE
 fi
