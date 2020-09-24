@@ -24,7 +24,7 @@ LC_COLLATE=C
 
 usage() {
 	cat << __END__
-check_lynx v0.9
+check_lynx v1.0.1
 
 Monitor values of functions in IoT Open Lynx platform
 
