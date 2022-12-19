@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Small check that get gata from IoT Open Lynx
+# Small check that get data from IoT Open Lynx
 #
 # Copyright (C) 2019  IoT Open One AB
 #
@@ -220,7 +220,7 @@ fi
 
 
 # Get value and timestamp from log
-STATS=$(curl -s $URL/api/v2/status/$INSTALLATION -X GET -u monitoring:$API_KEY -H Content-Type: application/json | jq -c .[] | grep $TOPIC)
+STATS=$(curl -s $URL/api/v2/status/$INSTALLATION?topics=$TOPIC -X GET -u monitoring:$API_KEY -H Content-Type: application/json | jq -c .[])
 
 if [ -z "$STATS" ]; then
 	echo Could not get stats for $NAME
